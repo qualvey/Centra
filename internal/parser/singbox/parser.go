@@ -49,6 +49,9 @@ func classify(lower string) string {
 	if strings.Contains(lower, "reality") && strings.Contains(lower, "invalid") && strings.Contains(lower, "handshake") {
 		return RealityInvalidHandshake
 	}
+	if strings.Contains(lower, "tls handshake") && strings.Contains(lower, "reality") && strings.Contains(lower, "processed invalid connection") {
+		return RealityInvalidHandshake
+	}
 	return ""
 }
 

@@ -37,6 +37,9 @@ func (e *Engine) Run(ctx context.Context) error {
 			return err
 		}
 		if !ok {
+			if err := e.commitLine(ctx, line); err != nil {
+				return err
+			}
 			continue
 		}
 
@@ -53,5 +56,17 @@ func (e *Engine) Run(ctx context.Context) error {
 				}
 			}
 		}
+
+		if err := e.commitLine(ctx, line); err != nil {
+			return err
+		}
 	}
+}
+
+func (e *Engine) commitLine(ctx context.Context, line string) error {
+	committer, ok := e.config.Reader.(LineCommitter)
+	if !ok {
+		return nil
+	}
+	return committer.CommitLine(ctx, line)
 }

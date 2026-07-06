@@ -36,7 +36,7 @@ func main() {
 	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt)
 	defer stop()
 
-	logReader, closeFn, err := buildReader(ctx, cfg.Source.Type, cfg.Source.Unit, os.Stdin)
+	logReader, closeFn, err := buildReader(ctx, cfg.Source, os.Stdin)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -90,17 +90,24 @@ func applyFlagOverrides(cfg *config.Config, visited map[string]bool) {
 	}
 }
 
-func buildReader(ctx context.Context, source, unit string, stdin io.Reader) (engine.Reader, func() error, error) {
-	switch strings.ToLower(source) {
+func buildReader(ctx context.Context, source config.SourceConfig, stdin io.Reader) (engine.Reader, func() error, error) {
+	switch strings.ToLower(source.Type) {
 	case "stdin":
 		return reader.NewScannerReader(bufio.NewScanner(stdin)), nil, nil
 	case "journalctl":
-		journal, err := reader.NewJournalctlReader(ctx, unit)
+		journal, err := reader.NewJournalctlReaderWithConfig(ctx, reader.JournalctlConfig{
+			Unit:           source.Unit,
+			HistoryEnabled: source.History.Enabled,
+			Since:          source.History.Since,
+			Follow:         source.History.Follow,
+			Resume:         source.History.Resume,
+			CheckpointFile: source.History.CheckpointFile,
+		})
 		if err != nil {
 			return nil, nil, err
 		}
 		return journal, journal.Close, nil
 	default:
-		return nil, nil, fmt.Errorf("unknown source %q", source)
+		return nil, nil, fmt.Errorf("unknown source %q", source.Type)
 	}
 }

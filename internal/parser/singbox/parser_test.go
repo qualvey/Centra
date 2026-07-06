@@ -24,6 +24,25 @@ func TestParseRealityInvalidHandshake(t *testing.T) {
 	}
 }
 
+func TestParseRealityProcessedInvalidConnection(t *testing.T) {
+	parser := NewParser()
+	line := "2026-07-06T21:47:27+08:00 tw sing-box[2631710]: ERROR inbound/vless[vless-in]: process connection from 45.194.67.28:51078: TLS handshake: REALITY: processed invalid connection"
+
+	event, ok, err := parser.Parse(line)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if !ok {
+		t.Fatal("expected parser to emit event")
+	}
+	if event.EventType != RealityInvalidHandshake {
+		t.Fatalf("event type = %q, want %q", event.EventType, RealityInvalidHandshake)
+	}
+	if event.IP != "45.194.67.28" {
+		t.Fatalf("ip = %q", event.IP)
+	}
+}
+
 func TestParseIgnoresUnrelatedLine(t *testing.T) {
 	parser := NewParser()
 

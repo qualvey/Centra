@@ -1,7 +1,14 @@
 {
   "source": {
     "type": "stdin",
-    "unit": "sing-box"
+    "unit": "sing-box",
+    "history": {
+      "enabled": false,
+      "since": "",
+      "follow": true,
+      "resume": false,
+      "checkpoint_file": ".eventguard/journalctl.checkpoint"
+    }
   },
   "rules": {
     "reality_invalid_handshake": {

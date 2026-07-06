@@ -12,8 +12,17 @@ type Config struct {
 }
 
 type SourceConfig struct {
-	Type string `json:"type"`
-	Unit string `json:"unit"`
+	Type    string               `json:"type"`
+	Unit    string               `json:"unit"`
+	History JournalHistoryConfig `json:"history"`
+}
+
+type JournalHistoryConfig struct {
+	Enabled        bool   `json:"enabled"`
+	Since          string `json:"since"`
+	Follow         bool   `json:"follow"`
+	Resume         bool   `json:"resume"`
+	CheckpointFile string `json:"checkpoint_file"`
 }
 
 type RulesConfig struct {
@@ -30,6 +39,9 @@ func Default() Config {
 		Source: SourceConfig{
 			Type: "stdin",
 			Unit: "sing-box",
+			History: JournalHistoryConfig{
+				Follow: true,
+			},
 		},
 		Rules: RulesConfig{
 			RealityInvalidHandshake: IPThresholdConfig{
@@ -65,6 +77,9 @@ func normalize(cfg *Config) {
 	}
 	if cfg.Source.Unit == "" {
 		cfg.Source.Unit = "sing-box"
+	}
+	if cfg.Source.History.Enabled && cfg.Source.History.Resume && cfg.Source.History.CheckpointFile == "" {
+		cfg.Source.History.CheckpointFile = ".eventguard/journalctl.checkpoint"
 	}
 	if cfg.Rules.RealityInvalidHandshake.Threshold <= 0 {
 		cfg.Rules.RealityInvalidHandshake.Threshold = 5

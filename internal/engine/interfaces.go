@@ -10,6 +10,10 @@ type Reader interface {
 	ReadLine(ctx context.Context) (string, error)
 }
 
+type LineCommitter interface {
+	CommitLine(ctx context.Context, line string) error
+}
+
 type Parser interface {
 	Parse(line string) (core.Event, bool, error)
 }

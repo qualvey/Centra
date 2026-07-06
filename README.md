@@ -28,6 +28,8 @@ From journalctl on Linux:
 go run ./cmd/eventguard -source journalctl -unit sing-box -threshold 5
 ```
 
+Journalctl can also run an optional historical scan with timestamp resume. See [docs/journalctl-history-resume.md](docs/journalctl-history-resume.md).
+
 Example input:
 
 ```text
