@@ -60,6 +60,8 @@ func main() {
 		}))
 	}
 
+	log.Printf("Starting EventGuard with %s storage...", cfg.Storage.Type)
+
 	processor := engine.New(engine.Config{
 		Reader:  logReader,
 		Parser:  singbox.NewParser(),

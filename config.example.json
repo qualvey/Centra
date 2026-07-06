@@ -11,13 +11,13 @@
     }
   },
   "storage": {
-    "type": "memory",
+    "type": "sqlite",
     "path": ".eventguard/eventguard.db"
   },
   "rules": {
     "reality_invalid_handshake": {
       "enabled": true,
-      "threshold": 5
+      "threshold": 3
     }
   }
 }

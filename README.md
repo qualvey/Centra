@@ -203,6 +203,12 @@ sqlite3 .eventguard/eventguard.db "select timestamp, ip, event_type from events 
 sqlite3 .eventguard/eventguard.db "select ip, count, last_seen, status from ip_states order by count desc limit 10;"
 ```
 
+> [!NOTE]
+> **常见问题：查询时提示 `no such table: events`？**
+> 如果您在执行 `sqlite3` 查询时遇到 `Error: in prepare, no such table: events`，这说明您的数据库文件内没有建表，原因往往是程序运行时并没有真正使用 SQLite：
+> 1. 请确认您的 `config.example.json` 确实已经保存了 `"type": "sqlite"` 配置。
+> 2. 如果 `history.follow` 为 `false` 且找不到新日志，程序将极快退出。为确认它正常启动并加载了 SQLite，请留意终端是否输出了 `Starting EventGuard with sqlite storage...` 日志。
+
 ## stdin 模式
 
 stdin 模式适合本地测试、管道输入和离线日志验证。
