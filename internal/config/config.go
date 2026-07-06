@@ -7,8 +7,9 @@ import (
 )
 
 type Config struct {
-	Source SourceConfig `json:"source"`
-	Rules  RulesConfig  `json:"rules"`
+	Source  SourceConfig  `json:"source"`
+	Storage StorageConfig `json:"storage"`
+	Rules   RulesConfig   `json:"rules"`
 }
 
 type SourceConfig struct {
@@ -23,6 +24,11 @@ type JournalHistoryConfig struct {
 	Follow         bool   `json:"follow"`
 	Resume         bool   `json:"resume"`
 	CheckpointFile string `json:"checkpoint_file"`
+}
+
+type StorageConfig struct {
+	Type string `json:"type"`
+	Path string `json:"path"`
 }
 
 type RulesConfig struct {
@@ -42,6 +48,10 @@ func Default() Config {
 			History: JournalHistoryConfig{
 				Follow: true,
 			},
+		},
+		Storage: StorageConfig{
+			Type: "memory",
+			Path: ".eventguard/eventguard.db",
 		},
 		Rules: RulesConfig{
 			RealityInvalidHandshake: IPThresholdConfig{
@@ -80,6 +90,12 @@ func normalize(cfg *Config) {
 	}
 	if cfg.Source.History.Enabled && cfg.Source.History.Resume && cfg.Source.History.CheckpointFile == "" {
 		cfg.Source.History.CheckpointFile = ".eventguard/journalctl.checkpoint"
+	}
+	if cfg.Storage.Type == "" {
+		cfg.Storage.Type = "memory"
+	}
+	if cfg.Storage.Path == "" {
+		cfg.Storage.Path = ".eventguard/eventguard.db"
 	}
 	if cfg.Rules.RealityInvalidHandshake.Threshold <= 0 {
 		cfg.Rules.RealityInvalidHandshake.Threshold = 5

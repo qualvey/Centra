@@ -18,6 +18,12 @@ func TestLoadDefaults(t *testing.T) {
 	if cfg.Source.Unit != "sing-box" {
 		t.Fatalf("source unit = %q", cfg.Source.Unit)
 	}
+	if cfg.Storage.Type != "memory" {
+		t.Fatalf("storage type = %q", cfg.Storage.Type)
+	}
+	if cfg.Storage.Path != ".eventguard/eventguard.db" {
+		t.Fatalf("storage path = %q", cfg.Storage.Path)
+	}
 	if !cfg.Source.History.Follow {
 		t.Fatal("journal history follow should default to true")
 	}
@@ -70,6 +76,7 @@ func TestLoadConfigFile(t *testing.T) {
 	path := filepath.Join(t.TempDir(), "config.json")
 	err := os.WriteFile(path, []byte(`{
 		"source": {"type": "journalctl", "unit": "sing-box.service"},
+		"storage": {"type": "sqlite", "path": "/tmp/eventguard.db"},
 		"rules": {
 			"reality_invalid_handshake": {"enabled": true, "threshold": 7}
 		}
@@ -88,6 +95,12 @@ func TestLoadConfigFile(t *testing.T) {
 	}
 	if cfg.Source.Unit != "sing-box.service" {
 		t.Fatalf("source unit = %q", cfg.Source.Unit)
+	}
+	if cfg.Storage.Type != "sqlite" {
+		t.Fatalf("storage type = %q", cfg.Storage.Type)
+	}
+	if cfg.Storage.Path != "/tmp/eventguard.db" {
+		t.Fatalf("storage path = %q", cfg.Storage.Path)
 	}
 	if cfg.Rules.RealityInvalidHandshake.Threshold != 7 {
 		t.Fatalf("threshold = %d", cfg.Rules.RealityInvalidHandshake.Threshold)

@@ -10,6 +10,10 @@
       "checkpoint_file": ".eventguard/journalctl.checkpoint"
     }
   },
+  "storage": {
+    "type": "memory",
+    "path": ".eventguard/eventguard.db"
+  },
   "rules": {
     "reality_invalid_handshake": {
       "enabled": true,

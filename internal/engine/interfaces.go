@@ -30,3 +30,7 @@ type Storage interface {
 	Increment(ctx context.Context, key string) (int, error)
 	MarkOnce(ctx context.Context, key string) (bool, error)
 }
+
+type EventRecorder interface {
+	SaveEvent(ctx context.Context, event core.Event) error
+}

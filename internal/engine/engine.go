@@ -4,6 +4,8 @@ import (
 	"context"
 	"errors"
 	"io"
+
+	"eventguard/internal/core"
 )
 
 type Config struct {
@@ -43,6 +45,10 @@ func (e *Engine) Run(ctx context.Context) error {
 			continue
 		}
 
+		if err := e.saveEvent(ctx, event); err != nil {
+			return err
+		}
+
 		for _, r := range e.config.Rules {
 			triggers, err := r.Evaluate(ctx, event, e.config.Storage)
 			if err != nil {
@@ -69,4 +75,12 @@ func (e *Engine) commitLine(ctx context.Context, line string) error {
 		return nil
 	}
 	return committer.CommitLine(ctx, line)
+}
+
+func (e *Engine) saveEvent(ctx context.Context, event core.Event) error {
+	recorder, ok := e.config.Storage.(EventRecorder)
+	if !ok {
+		return nil
+	}
+	return recorder.SaveEvent(ctx, event)
 }

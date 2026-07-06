@@ -44,6 +44,14 @@ func main() {
 		defer closeFn()
 	}
 
+	stateStore, closeStore, err := buildStorage(cfg.Storage)
+	if err != nil {
+		log.Fatal(err)
+	}
+	if closeStore != nil {
+		defer closeStore()
+	}
+
 	rules := []engine.Rule{}
 	if cfg.Rules.RealityInvalidHandshake.Enabled {
 		rules = append(rules, rule.NewIPThresholdRule(rule.IPThresholdConfig{
@@ -55,7 +63,7 @@ func main() {
 	processor := engine.New(engine.Config{
 		Reader:  logReader,
 		Parser:  singbox.NewParser(),
-		Storage: storage.NewMemoryStore(),
+		Storage: stateStore,
 		Rules:   rules,
 		Actions: []engine.Action{
 			action.NewConsoleSuggestion(os.Stdout),
@@ -64,6 +72,21 @@ func main() {
 
 	if err := processor.Run(ctx); err != nil && err != context.Canceled {
 		log.Fatal(err)
+	}
+}
+
+func buildStorage(cfg config.StorageConfig) (engine.Storage, func() error, error) {
+	switch strings.ToLower(cfg.Type) {
+	case "", "memory":
+		return storage.NewMemoryStore(), nil, nil
+	case "sqlite":
+		store, err := storage.OpenSQLite(cfg.Path)
+		if err != nil {
+			return nil, nil, err
+		}
+		return store, store.Close, nil
+	default:
+		return nil, nil, fmt.Errorf("unknown storage type %q", cfg.Type)
 	}
 }
 
