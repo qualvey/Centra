@@ -1,0 +1,112 @@
+Jul 06 21:47:27 tw sing-box[2631710]: +0800 2026-07-06 21:47:27 ERROR [2955267372 1.5s] inbound/vless[vless-in]: process connection from 45.194.67.28:51078: TLS handshake: REALITY: processed invalid connection
+Jul 06 21:47:25 tw sing-box[2631710]: +0800 2026-07-06 21:47:25 INFO [2955267372 0ms] inbound/vless[vless-in]: inbound connection from 45.194.67.28:51078
+Jul 06 21:45:17 tw sing-box[2631710]: +0800 2026-07-06 21:45:17 ERROR [595978426 917ms] inbound/vless[vless-in]: process connection from 45.227.254.155:65145: TLS handshake: REALITY: processed invalid connection
+Jul 06 21:45:16 tw sing-box[2631710]: +0800 2026-07-06 21:45:16 INFO [595978426 0ms] inbound/vless[vless-in]: inbound connection from 45.227.254.155:65145
+Jul 06 21:40:31 tw sing-box[2631710]: +0800 2026-07-06 21:40:31 ERROR [4079354630 10.77s] inbound/vless[vless-in]: process connection from 45.148.10.62:52890: TLS handshake: REALITY: processed invalid connection
+Jul 06 21:40:20 tw sing-box[2631710]: +0800 2026-07-06 21:40:20 INFO [4079354630 0ms] inbound/vless[vless-in]: inbound connection from 45.148.10.62:52890
+Jul 06 21:39:42 tw sing-box[2631710]: +0800 2026-07-06 21:39:42 ERROR [2806015110 692ms] inbound/vless[vless-in]: process connection from 194.165.16.165:65159: TLS handshake: REALITY: processed invalid connection
+Jul 06 21:39:42 tw sing-box[2631710]: +0800 2026-07-06 21:39:42 INFO [2806015110 0ms] inbound/vless[vless-in]: inbound connection from 194.165.16.165:65159
+Jul 06 21:38:54 tw sing-box[2631710]: +0800 2026-07-06 21:38:54 ERROR [3907830853 14.99s] inbound/vless[vless-in]: process connection from 45.198.224.188:42162: TLS handshake: REALITY: processed invalid connection
+Jul 06 21:30:56 tw sing-box[2631710]: +0800 2026-07-06 21:30:56 ERROR [3779127157 464ms] inbound/vless[vless-in]: process connection from 45.227.254.152:65414: TLS handshake: REALITY: processed invalid connection
+Jul 06 21:30:55 tw sing-box[2631710]: +0800 2026-07-06 21:30:55 INFO [3779127157 0ms] inbound/vless[vless-in]: inbound connection from 45.227.254.152:65414
+Jul 06 21:21:57 tw sing-box[2631710]: +0800 2026-07-06 21:21:57 ERROR [1495871958 273ms] inbound/vless[vless-in]: process connection from 194.165.16.161:65454: TLS handshake: REALITY: processed invalid connection
+Jul 06 21:21:57 tw sing-box[2631710]: +0800 2026-07-06 21:21:57 INFO [1495871958 0ms] inbound/vless[vless-in]: inbound connection from 194.165.16.161:65454
+Jul 06 21:19:48 tw sing-box[2631710]: +0800 2026-07-06 21:19:48 ERROR [2876599605 255ms] inbound/vless[vless-in]: process connection from 91.238.181.94:65185: TLS handshake: REALITY: processed invalid connection
+Jul 06 21:19:48 tw sing-box[2631710]: +0800 2026-07-06 21:19:48 INFO [2876599605 0ms] inbound/vless[vless-in]: inbound connection from 91.238.181.94:65185
+Jul 06 21:18:34 tw sing-box[2631710]: +0800 2026-07-06 21:18:34 ERROR [2144295149 527ms] inbound/vless[vless-in]: process connection from 194.165.16.165:2441: TLS handshake: REALITY: processed invalid connection
+Jul 06 21:18:33 tw sing-box[2631710]: +0800 2026-07-06 21:18:33 INFO [2144295149 0ms] inbound/vless[vless-in]: inbound connection from 194.165.16.165:2441
+Jul 06 21:16:00 tw sing-box[2631710]: +0800 2026-07-06 21:16:00 ERROR [572253950 182ms] inbound/vless[vless-in]: process connection from 88.214.25.123:65040: TLS handshake: REALITY: processed invalid connection
+Jul 06 21:16:00 tw sing-box[2631710]: +0800 2026-07-06 21:16:00 INFO [572253950 0ms] inbound/vless[vless-in]: inbound connection from 88.214.25.123:65040
+Jul 06 21:13:30 tw sing-box[2631710]: +0800 2026-07-06 21:13:30 ERROR [173003738 228ms] inbound/vless[vless-in]: process connection from 45.227.254.152:65041: TLS handshake: REALITY: processed invalid connection
+Jul 06 21:04:28 tw sing-box[2631710]: +0800 2026-07-06 21:04:28 ERROR [68455765 15.84s] inbound/vless[vless-in]: process connection from 104.192.3.106:37478: TLS handshake: REALITY: processed invalid connection
+Jul 06 21:04:12 tw sing-box[2631710]: +0800 2026-07-06 21:04:12 INFO [68455765 0ms] inbound/vless[vless-in]: inbound connection from 104.192.3.106:37478
+Jul 06 20:59:11 tw sing-box[2631710]: +0800 2026-07-06 20:59:11 ERROR [3535178655 407ms] inbound/vless[vless-in]: process connection from 46.151.178.13:57502: TLS handshake: REALITY: processed invalid connection
+Jul 06 20:59:11 tw sing-box[2631710]: +0800 2026-07-06 20:59:11 INFO [3535178655 0ms] inbound/vless[vless-in]: inbound connection from 46.151.178.13:57502
+Jul 06 20:57:28 tw sing-box[2631710]: +0800 2026-07-06 20:57:28 ERROR [567907050 4.42s] inbound/vless[vless-in]: process connection from 91.196.152.178:34731: TLS handshake: REALITY: processed invalid connection
+Jul 06 20:57:23 tw sing-box[2631710]: +0800 2026-07-06 20:57:23 INFO [567907050 0ms] inbound/vless[vless-in]: inbound connection from 91.196.152.178:34731
+Jul 06 20:55:35 tw sing-box[2631710]: +0800 2026-07-06 20:55:35 ERROR [3036653705 1m0s] inbound/vless[vless-in]: process connection from 91.231.89.3:41933: TLS handshake: REALITY: processed invalid connection
+Jul 06 20:54:39 tw sing-box[2631710]: +0800 2026-07-06 20:54:39 ERROR [3978642145 3.54s] inbound/vless[vless-in]: process connection from 91.231.89.104:49165: TLS handshake: REALITY: processed invalid connection
+
+Jul 06 20:31:39 tw sing-box[2631710]: +0800 2026-07-06 20:31:39 ERROR [3485172220 1m15s] inbound/vless[vless-in]: process connection from 20.65.194.58:41358: TLS handshake: REALITY: processed invalid connection
+Jul 06 20:30:25 tw sing-box[2631710]: +0800 2026-07-06 20:30:25 ERROR [1609298309 214ms] inbound/vless[vless-in]: process connection from 20.65.194.58:41364: TLS handshake: REALITY: processed invalid connection
+Jul 06 20:30:25 tw sing-box[2631710]: +0800 2026-07-06 20:30:25 INFO [1609298309 0ms] inbound/vless[vless-in]: inbound connection from 20.65.194.58:41364
+Jul 06 20:30:23 tw sing-box[2631710]: +0800 2026-07-06 20:30:23 INFO [3485172220 0ms] inbound/vless[vless-in]: inbound connection from 20.65.194.58:41358
+Jul 06 20:30:02 tw sing-box[2631710]: +0800 2026-07-06 20:30:02 ERROR [4145046646 499ms] inbound/vless[vless-in]: process connection from 185.189.182.234:33082: TLS handshake: REALITY: processed invalid connection
+Jul 06 20:30:01 tw sing-box[2631710]: +0800 2026-07-06 20:30:01 INFO [4145046646 0ms] inbound/vless[vless-in]: inbound connection from 185.189.182.234:33082
+Jul 06 20:26:25 tw sing-box[2631710]: +0800 2026-07-06 20:26:25 ERROR [2503860646 226ms] inbound/vless[vless-in]: process connection from 80.66.83.43:65468: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:32 tw sing-box[2631710]: +0800 2026-07-06 18:51:32 ERROR [1913623381 4.32s] inbound/vless[vless-in]: process connection from 103.62.49.178:5720: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:32 tw sing-box[2631710]: +0800 2026-07-06 18:51:32 ERROR [3212861764 4.32s] inbound/vless[vless-in]: process connection from 103.62.49.178:5708: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:32 tw sing-box[2631710]: +0800 2026-07-06 18:51:32 ERROR [3293258282 4.32s] inbound/vless[vless-in]: process connection from 103.62.49.178:5718: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:32 tw sing-box[2631710]: +0800 2026-07-06 18:51:32 ERROR [1745005964 4.30s] inbound/vless[vless-in]: process connection from 103.62.49.178:5700: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:32 tw sing-box[2631710]: +0800 2026-07-06 18:51:32 ERROR [1326585726 4.30s] inbound/vless[vless-in]: process connection from 103.62.49.178:5684: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:32 tw sing-box[2631710]: +0800 2026-07-06 18:51:32 INFO [3539961534 0ms] inbound/vless[vless-in]: inbound connection from 103.62.49.178:54172
+Jul 06 18:51:31 tw sing-box[2631710]: +0800 2026-07-06 18:51:31 ERROR [212619706 4.28s] inbound/vless[vless-in]: process connection from 103.62.49.178:5672: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:31 tw sing-box[2631710]: +0800 2026-07-06 18:51:31 ERROR [1202422082 4.30s] inbound/vless[vless-in]: process connection from 103.62.49.178:5668: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:30 tw sing-box[2631710]: +0800 2026-07-06 18:51:30 INFO [3259712396 0ms] inbound/vless[vless-in]: inbound connection from 103.62.49.178:5758
+Jul 06 18:51:30 tw sing-box[2631710]: +0800 2026-07-06 18:51:30 INFO [2106321910 0ms] inbound/vless[vless-in]: inbound connection from 103.62.49.178:5752
+Jul 06 18:51:30 tw sing-box[2631710]: +0800 2026-07-06 18:51:30 ERROR [2067024568 4.39s] inbound/vless[vless-in]: process connection from 103.62.49.178:5654: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:30 tw sing-box[2631710]: +0800 2026-07-06 18:51:30 INFO [4088288063 0ms] inbound/vless[vless-in]: inbound connection from 103.62.49.178:5746
+Jul 06 18:51:30 tw sing-box[2631710]: +0800 2026-07-06 18:51:30 INFO [721229543 0ms] inbound/vless[vless-in]: inbound connection from 103.62.49.178:5728
+Jul 06 18:51:30 tw sing-box[2631710]: +0800 2026-07-06 18:51:30 INFO [2476941324 0ms] inbound/vless[vless-in]: inbound connection from 103.62.49.178:5722
+Jul 06 18:51:30 tw sing-box[2631710]: +0800 2026-07-06 18:51:30 INFO [3449681636 0ms] inbound/vless[vless-in]: inbound connection from 103.62.49.178:5736
+Jul 06 18:51:28 tw sing-box[2631710]: +0800 2026-07-06 18:51:28 ERROR [1252912373 4.33s] inbound/vless[vless-in]: process connection from 103.62.49.178:5644: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:28 tw sing-box[2631710]: +0800 2026-07-06 18:51:28 ERROR [1339401914 4.33s] inbound/vless[vless-in]: process connection from 103.62.49.178:5646: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:28 tw sing-box[2631710]: +0800 2026-07-06 18:51:28 ERROR [1338894399 4.33s] inbound/vless[vless-in]: process connection from 103.62.49.178:5634: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:28 tw sing-box[2631710]: +0800 2026-07-06 18:51:28 ERROR [1635004254 4.33s] inbound/vless[vless-in]: process connection from 103.62.49.178:5628: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:28 tw sing-box[2631710]: +0800 2026-07-06 18:51:28 ERROR [2447526410 4.33s] inbound/vless[vless-in]: process connection from 103.62.49.178:5640: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:28 tw sing-box[2631710]: +0800 2026-07-06 18:51:28 ERROR [4273676086 4.31s] inbound/vless[vless-in]: process connection from 103.62.49.178:5626: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:28 tw sing-box[2631710]: +0800 2026-07-06 18:51:28 INFO [1913623381 0ms] inbound/vless[vless-in]: inbound connection from 103.62.49.178:5720
+Jul 06 18:51:28 tw sing-box[2631710]: +0800 2026-07-06 18:51:28 INFO [3293258282 0ms] inbound/vless[vless-in]: inbound connection from 103.62.49.178:5718
+Jul 06 18:51:28 tw sing-box[2631710]: +0800 2026-07-06 18:51:28 INFO [3212861764 0ms] inbound/vless[vless-in]: inbound connection from 103.62.49.178:5708
+Jul 06 18:51:28 tw sing-box[2631710]: +0800 2026-07-06 18:51:28 INFO [1745005964 0ms] inbound/vless[vless-in]: inbound connection from 103.62.49.178:5700
+Jul 06 18:51:27 tw sing-box[2631710]: +0800 2026-07-06 18:51:27 INFO [1326585726 0ms] inbound/vless[vless-in]: inbound connection from 103.62.49.178:5684
+Jul 06 18:51:26 tw sing-box[2631710]: +0800 2026-07-06 18:51:26 INFO [212619706 0ms] inbound/vless[vless-in]: inbound connection from 103.62.49.178:5672
+Jul 06 18:51:26 tw sing-box[2631710]: +0800 2026-07-06 18:51:26 INFO [1202422082 0ms] inbound/vless[vless-in]: inbound connection from 103.62.49.178:5668
+Jul 06 18:51:26 tw sing-box[2631710]: +0800 2026-07-06 18:51:26 ERROR [3053618608 4.31s] inbound/vless[vless-in]: process connection from 103.62.49.178:5618: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:26 tw sing-box[2631710]: +0800 2026-07-06 18:51:26 ERROR [2568677745 4.30s] inbound/vless[vless-in]: process connection from 103.62.49.178:5612: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:26 tw sing-box[2631710]: +0800 2026-07-06 18:51:26 ERROR [100492984 4.31s] inbound/vless[vless-in]: process connection from 103.62.49.178:5598: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:26 tw sing-box[2631710]: +0800 2026-07-06 18:51:26 ERROR [1001922291 4.31s] inbound/vless[vless-in]: process connection from 103.62.49.178:5588: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:25 tw sing-box[2631710]: +0800 2026-07-06 18:51:25 INFO [2067024568 0ms] inbound/vless[vless-in]: inbound connection from 103.62.49.178:5654
+Jul 06 18:51:24 tw sing-box[2631710]: +0800 2026-07-06 18:51:24 INFO [1339401914 0ms] inbound/vless[vless-in]: inbound connection from 103.62.49.178:5646
+Jul 06 18:51:24 tw sing-box[2631710]: +0800 2026-07-06 18:51:24 INFO [1252912373 0ms] inbound/vless[vless-in]: inbound connection from 103.62.49.178:5644
+Jul 06 18:51:24 tw sing-box[2631710]: +0800 2026-07-06 18:51:24 INFO [4273676086 0ms] inbound/vless[vless-in]: inbound connection from 103.62.49.178:5626
+Jul 06 18:51:24 tw sing-box[2631710]: +0800 2026-07-06 18:51:24 INFO [2447526410 0ms] inbound/vless[vless-in]: inbound connection from 103.62.49.178:5640
+Jul 06 18:51:24 tw sing-box[2631710]: +0800 2026-07-06 18:51:24 INFO [1338894399 0ms] inbound/vless[vless-in]: inbound connection from 103.62.49.178:5634
+Jul 06 18:51:24 tw sing-box[2631710]: +0800 2026-07-06 18:51:24 INFO [1635004254 0ms] inbound/vless[vless-in]: inbound connection from 103.62.49.178:5628
+Jul 06 18:51:23 tw sing-box[2631710]: +0800 2026-07-06 18:51:23 ERROR [1480991648 4.31s] inbound/vless[vless-in]: process connection from 103.62.49.178:52438: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:23 tw sing-box[2631710]: +0800 2026-07-06 18:51:23 ERROR [1498843479 4.30s] inbound/vless[vless-in]: process connection from 103.62.49.178:52428: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:23 tw sing-box[2631710]: +0800 2026-07-06 18:51:23 ERROR [2215322452 4.31s] inbound/vless[vless-in]: process connection from 103.62.49.178:52420: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:22 tw sing-box[2631710]: +0800 2026-07-06 18:51:22 INFO [2568677745 0ms] inbound/vless[vless-in]: inbound connection from 103.62.49.178:5612
+Jul 06 18:51:22 tw sing-box[2631710]: +0800 2026-07-06 18:51:22 INFO [3053618608 0ms] inbound/vless[vless-in]: inbound connection from 103.62.49.178:5618
+Jul 06 18:51:22 tw sing-box[2631710]: +0800 2026-07-06 18:51:22 INFO [100492984 0ms] inbound/vless[vless-in]: inbound connection from 103.62.49.178:5598
+Jul 06 18:51:22 tw sing-box[2631710]: +0800 2026-07-06 18:51:22 INFO [1001922291 0ms] inbound/vless[vless-in]: inbound connection from 103.62.49.178:5588
+Jul 06 18:51:18 tw sing-box[2631710]: +0800 2026-07-06 18:51:18 INFO [1480991648 0ms] inbound/vless[vless-in]: inbound connection from 103.62.49.178:52438
+Jul 06 18:51:18 tw sing-box[2631710]: +0800 2026-07-06 18:51:18 INFO [1498843479 0ms] inbound/vless[vless-in]: inbound connection from 103.62.49.178:52428
+Jul 06 18:51:18 tw sing-box[2631710]: +0800 2026-07-06 18:51:18 INFO [2215322452 0ms] inbound/vless[vless-in]: inbound connection from 103.62.49.178:52420
+Jul 06 18:51:10 tw sing-box[2631710]: +0800 2026-07-06 18:51:10 ERROR [3648201564 4.33s] inbound/vless[vless-in]: process connection from 103.62.49.178:16908: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:10 tw sing-box[2631710]: +0800 2026-07-06 18:51:10 ERROR [2134015615 4.32s] inbound/vless[vless-in]: process connection from 103.62.49.178:16922: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:10 tw sing-box[2631710]: +0800 2026-07-06 18:51:10 ERROR [2974953122 4.32s] inbound/vless[vless-in]: process connection from 103.62.49.178:16898: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:06 tw sing-box[2631710]: +0800 2026-07-06 18:51:06 ERROR [874368250 4.34s] inbound/vless[vless-in]: process connection from 103.62.49.178:16888: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:06 tw sing-box[2631710]: +0800 2026-07-06 18:51:06 ERROR [406662916 4.34s] inbound/vless[vless-in]: process connection from 103.62.49.178:16884: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:06 tw sing-box[2631710]: +0800 2026-07-06 18:51:06 ERROR [3278685921 4.34s] inbound/vless[vless-in]: process connection from 103.62.49.178:16876: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:06 tw sing-box[2631710]: +0800 2026-07-06 18:51:06 ERROR [1144661542 4.31s] inbound/vless[vless-in]: process connection from 103.62.49.178:16866: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:06 tw sing-box[2631710]: +0800 2026-07-06 18:51:06 ERROR [2210893927 4.31s] inbound/vless[vless-in]: process connection from 103.62.49.178:16860: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:06 tw sing-box[2631710]: +0800 2026-07-06 18:51:06 INFO [2134015615 0ms] inbound/vless[vless-in]: inbound connection from 103.62.49.178:16922
+Jul 06 18:51:06 tw sing-box[2631710]: +0800 2026-07-06 18:51:06 INFO [2974953122 0ms] inbound/vless[vless-in]: inbound connection from 103.62.49.178:16898
+Jul 06 18:51:06 tw sing-box[2631710]: +0800 2026-07-06 18:51:06 INFO [3648201564 0ms] inbound/vless[vless-in]: inbound connection from 103.62.49.178:16908
+Jul 06 18:51:04 tw sing-box[2631710]: +0800 2026-07-06 18:51:04 ERROR [1638990588 4.30s] inbound/vless[vless-in]: process connection from 103.62.49.178:12310: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:04 tw sing-box[2631710]: +0800 2026-07-06 18:51:04 ERROR [373185735 4.30s] inbound/vless[vless-in]: process connection from 103.62.49.178:12308: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:04 tw sing-box[2631710]: +0800 2026-07-06 18:51:04 ERROR [3279209797 4.29s] inbound/vless[vless-in]: process connection from 103.62.49.178:12298: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:04 tw sing-box[2631710]: +0800 2026-07-06 18:51:04 ERROR [2052293129 4.30s] inbound/vless[vless-in]: process connection from 103.62.49.178:12290: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:04 tw sing-box[2631710]: +0800 2026-07-06 18:51:04 ERROR [826076508 4.32s] inbound/vless[vless-in]: process connection from 103.62.49.178:12284: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:02 tw sing-box[2631710]: +0800 2026-07-06 18:51:02 ERROR [1262555462 4.30s] inbound/vless[vless-in]: process connection from 103.62.49.178:12282: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:02 tw sing-box[2631710]: +0800 2026-07-06 18:51:02 INFO [406662916 0ms] inbound/vless[vless-in]: inbound connection from 103.62.49.178:16884
+Jul 06 18:51:02 tw sing-box[2631710]: +0800 2026-07-06 18:51:02 INFO [874368250 0ms] inbound/vless[vless-in]: inbound connection from 103.62.49.178:16888
+Jul 06 18:51:02 tw sing-box[2631710]: +0800 2026-07-06 18:51:02 INFO [3278685921 0ms] inbound/vless[vless-in]: inbound connection from 103.62.49.178:16876
+Jul 06 18:51:02 tw sing-box[2631710]: +0800 2026-07-06 18:51:02 INFO [1144661542 0ms] inbound/vless[vless-in]: inbound connection from 103.62.49.178:16866
+Jul 06 18:51:02 tw sing-box[2631710]: +0800 2026-07-06 18:51:02 INFO [2210893927 0ms] inbound/vless[vless-in]: inbound connection from 103.62.49.178:16860
+Jul 06 18:51:01 tw sing-box[2631710]: +0800 2026-07-06 18:51:01 ERROR [445290000 4.34s] inbound/vless[vless-in]: process connection from 103.62.49.178:12268: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:01 tw sing-box[2631710]: +0800 2026-07-06 18:51:01 ERROR [1955177226 4.35s] inbound/vless[vless-in]: process connection from 103.62.49.178:12228: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:01 tw sing-box[2631710]: +0800 2026-07-06 18:51:01 ERROR [415075294 4.34s] inbound/vless[vless-in]: process connection from 103.62.49.178:12242: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:01 tw sing-box[2631710]: +0800 2026-07-06 18:51:01 ERROR [1777251699 4.34s] inbound/vless[vless-in]: process connection from 103.62.49.178:12236: TLS handshake: REALITY: processed invalid connection
+Jul 06 18:51:01 tw sing-box[2631710]: +0800 2026-07-06 18:51:01 ERROR [836785043 4.33s] inbound/vless[vless-in]: process connection from 103.62.49.178:12258: TLS handshake: REALITY: processed invalid connection
