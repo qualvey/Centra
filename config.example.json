@@ -1,0 +1,12 @@
+{
+  "source": {
+    "type": "stdin",
+    "unit": "sing-box"
+  },
+  "rules": {
+    "reality_invalid_handshake": {
+      "enabled": true,
+      "threshold": 5
+    }
+  }
+}

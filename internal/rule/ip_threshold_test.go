@@ -40,3 +40,30 @@ func TestIPThresholdRuleTriggersAtThreshold(t *testing.T) {
 		t.Fatalf("count = %d, want 3", triggers[0].Count)
 	}
 }
+
+func TestIPThresholdRuleDoesNotTriggerRepeatedly(t *testing.T) {
+	rule := NewIPThresholdRule(IPThresholdConfig{
+		EventType: "singbox.reality_invalid_handshake",
+		Threshold: 2,
+	})
+	store := storage.NewMemoryStore()
+	event := core.Event{
+		EventType: "singbox.reality_invalid_handshake",
+		IP:        "45.227.254.152",
+	}
+
+	for i := 1; i <= 2; i++ {
+		_, err := rule.Evaluate(context.Background(), event, store)
+		if err != nil {
+			t.Fatal(err)
+		}
+	}
+
+	triggers, err := rule.Evaluate(context.Background(), event, store)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(triggers) != 0 {
+		t.Fatalf("repeated trigger count = %d, want 0", len(triggers))
+	}
+}

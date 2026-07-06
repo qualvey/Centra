@@ -12,6 +12,7 @@ import (
 	"strings"
 
 	"eventguard/internal/action"
+	"eventguard/internal/config"
 	"eventguard/internal/engine"
 	"eventguard/internal/parser/singbox"
 	"eventguard/internal/reader"
@@ -20,17 +21,22 @@ import (
 )
 
 func main() {
-	var (
-		source    = flag.String("source", "stdin", "log source: stdin or journalctl")
-		unit      = flag.String("unit", "sing-box", "systemd unit used when source=journalctl")
-		threshold = flag.Int("threshold", 5, "event count threshold per IP")
-	)
+	configPath := flag.String("config", "", "optional JSON config file")
+	flag.String("source", "", "log source: stdin or journalctl")
+	flag.String("unit", "", "systemd unit used when source=journalctl")
+	flag.Int("threshold", 0, "event count threshold per IP")
 	flag.Parse()
+
+	cfg, err := config.Load(*configPath)
+	if err != nil {
+		log.Fatal(err)
+	}
+	applyFlagOverrides(&cfg, mapVisitedFlags())
 
 	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt)
 	defer stop()
 
-	logReader, closeFn, err := buildReader(ctx, *source, *unit, os.Stdin)
+	logReader, closeFn, err := buildReader(ctx, cfg.Source.Type, cfg.Source.Unit, os.Stdin)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -38,16 +44,19 @@ func main() {
 		defer closeFn()
 	}
 
+	rules := []engine.Rule{}
+	if cfg.Rules.RealityInvalidHandshake.Enabled {
+		rules = append(rules, rule.NewIPThresholdRule(rule.IPThresholdConfig{
+			EventType: singbox.RealityInvalidHandshake,
+			Threshold: cfg.Rules.RealityInvalidHandshake.Threshold,
+		}))
+	}
+
 	processor := engine.New(engine.Config{
 		Reader:  logReader,
 		Parser:  singbox.NewParser(),
 		Storage: storage.NewMemoryStore(),
-		Rules: []engine.Rule{
-			rule.NewIPThresholdRule(rule.IPThresholdConfig{
-				EventType: "singbox.reality_invalid_handshake",
-				Threshold: *threshold,
-			}),
-		},
+		Rules:   rules,
 		Actions: []engine.Action{
 			action.NewConsoleSuggestion(os.Stdout),
 		},
@@ -55,6 +64,29 @@ func main() {
 
 	if err := processor.Run(ctx); err != nil && err != context.Canceled {
 		log.Fatal(err)
+	}
+}
+
+func mapVisitedFlags() map[string]bool {
+	visited := make(map[string]bool)
+	flag.Visit(func(f *flag.Flag) {
+		visited[f.Name] = true
+	})
+	return visited
+}
+
+func applyFlagOverrides(cfg *config.Config, visited map[string]bool) {
+	if visited["source"] {
+		cfg.Source.Type = flag.Lookup("source").Value.String()
+	}
+	if visited["unit"] {
+		cfg.Source.Unit = flag.Lookup("unit").Value.String()
+	}
+	if visited["threshold"] {
+		value, ok := flag.Lookup("threshold").Value.(flag.Getter).Get().(int)
+		if ok && value > 0 {
+			cfg.Rules.RealityInvalidHandshake.Threshold = value
+		}
 	}
 }
 

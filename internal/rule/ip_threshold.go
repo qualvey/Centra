@@ -38,6 +38,15 @@ func (r *IPThresholdRule) Evaluate(ctx context.Context, event core.Event, store 
 		return nil, nil
 	}
 
+	markKey := fmt.Sprintf("triggered:%s:%s", event.EventType, event.IP)
+	firstTrigger, err := store.MarkOnce(ctx, markKey)
+	if err != nil {
+		return nil, err
+	}
+	if !firstTrigger {
+		return nil, nil
+	}
+
 	return []core.Trigger{{
 		Event:  event,
 		Reason: "REALITY Invalid Handshake",

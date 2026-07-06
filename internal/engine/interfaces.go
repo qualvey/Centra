@@ -24,4 +24,5 @@ type Action interface {
 
 type Storage interface {
 	Increment(ctx context.Context, key string) (int, error)
+	MarkOnce(ctx context.Context, key string) (bool, error)
 }

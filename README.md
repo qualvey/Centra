@@ -16,6 +16,12 @@ From stdin:
 go run ./cmd/eventguard -source stdin -threshold 5
 ```
 
+With a config file:
+
+```powershell
+go run ./cmd/eventguard -config config.example.json
+```
+
 From journalctl on Linux:
 
 ```bash
@@ -43,3 +49,5 @@ Count:
 
 5
 ```
+
+Each IP is suggested once after it reaches the configured threshold, so later matching events do not spam repeated block suggestions.
